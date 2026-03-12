@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharath Darsika | India's Ultimate Travel Ecosystem</title>
+    
+    <link rel="icon" type="image/png" href="fav-icon.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #0F4C81;
+            --saffron: #FF7A00;
+            --emerald: #2E8B57;
+            --dark: #020617;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(15, 76, 129, 0.95), rgba(2, 6, 23, 0.98)), 
+                        url('https://images.unsplash.com/photo-1548013146-72479768bbaa?w=1600');
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .navbar-brand img {
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .hero-title {
+            font-size: clamp(3.5rem, 9vw, 6rem);
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .text-saffron { color: var(--saffron); }
+
+        /* Feature Cards */
+        .service-card {
+            border: none;
+            border-radius: 30px;
+            background: #F8FAFC;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            padding: 40px;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .service-card:hover .icon-box {
+            background: var(--saffron);
+            color: white;
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Glassmorphism Section */
+        .glass-legal {
+            background: var(--dark);
+            border-radius: 50px;
+            padding: 80px 40px;
+            margin: 100px 0;
+            color: white;
+        }
+
+        .policy-link {
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .policy-link:hover {
+            background: var(--saffron);
+            color: white;
+            border-color: var(--saffron);
+            transform: translateX(10px);
+        }
+
+        .btn-cta {
+            background: var(--saffron);
+            color: white;
+            border-radius: 50px;
+            padding: 18px 45px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border: none;
+            box-shadow: 0 15px 30px rgba(255, 122, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-cta:hover {
+            background: white;
+            color: var(--saffron);
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #000;
+            padding: 60px 0 30px;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-white py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="logo.png" alt="Bharath Darsika Logo" class="me-2">
+                <span class="fw-bold text-primary">BHARATH DARSIKA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold">
+                    <li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tours">Trips</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#legal">Legal</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white px-4 ms-lg-3 rounded-pill" href="mailto:bharathdarshika@gmail.com">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="badge bg-saffron text-white mb-4 px-3 py-2 rounded-pill">🚩 INDIA'S FIRST SMART TRAVEL ECOSYSTEM</div>
+                    <h1 class="hero-title">Explore the <br><span class="text-saffron">Hidden Soul</span> <br>of Bharat.</h1>
+                    <p class="lead mt-4 opacity-75 pe-lg-5 fs-4">
+                        Everything a traveler needs. From secret waterfalls to professional tour guides and local transport—all in one place.
+                    </p>
+                    <div class="mt-5">
+                        <button class="btn btn-cta me-3 mb-3">Download App Now</button>
+                        <a href="https://instagram.com/bharathdarshika" class="btn btn-outline-light rounded-pill px-4 py-3 mb-3">
+                            <i class="fa-brands fa-instagram me-2"></i>@bharathdarshika
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="why" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-saffron fw-bold text-uppercase">Our Expertise</h6>
+                <h2 class="display-4 fw-bold mt-2">More than just a Guide</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-box"><i class="fa-solid fa-map-pin"></i></div>
+                        <h3>Hidden Gems</h3>
+                        <p class="opacity-75">Watch rewards ads to unlock locations that aren't on any other map. Explore the unknown.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-box"><i class="fa-solid fa-users-gear"></i></div>
+                        <h3>Tour Organizing</h3>
+                        <p class="opacity-75">Professional group trips, solo adventures, and family packages organized by Bharath Darsika.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-card shadow-sm">
+                        <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+                        <h3>History Guides</h3>
+                        <p class="opacity-75">Integrated YouTube history vlogs. Learn the ancient science behind every temple you visit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container" id="tours">
+        <div class="row g-4 text-center">
+            <div class="col-md-3" data-aos="fade-up">
+                <h2 class="fw-black text-primary display-5">24/7</h2>
+                <p class="fw-bold">Safety Support</p>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="fw-black text-primary display-5">0%</h2>
+                <p class="fw-bold">Booking Commission</p>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="fw-black text-primary display-5">500+</h2>
+                <p class="fw-bold">Verified Vendors</p>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="fw-black text-primary display-5">10k+</h2>
+                <p class="fw-bold">Travelers Community</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="legal">
+        <div class="glass-legal shadow-lg" data-aos="fade-up">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-4">Transparency is <br><span class="text-saffron">Our Priority</span></h2>
+                    <p class="opacity-75 fs-5">We are committed to Bharat's data sovereignty and your safety. Our policies are designed to protect both travelers and local businesses.</p>
+                    <div class="mt-4">
+                        <h6 class="fw-bold">Official Email:</h6>
+                        <p class="text-saffron">bharathdarshika@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <a href="#" class="policy-link">
+                        <span><i class="fa-solid fa-shield-halved me-3"></i> Privacy Policy</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="policy-link">
+                        <span><i class="fa-solid fa-file-invoice me-3"></i> Terms & Conditions</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="policy-link">
+                        <span><i class="fa-solid fa-hand-holding-dollar me-3"></i> Refund & Cancellation</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="policy-link">
+                        <span><i class="fa-solid fa-user-lock me-3"></i> Merchant Agreement</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <img src="logo.png" alt="Logo" class="mb-4" style="height: 60px;">
+            <h4 class="text-white fw-black letter-spacing-2">BHARATH DARSIKA</h4>
+            <div class="mt-4 fs-3">
+                <a href="https://instagram.com/bharathdarshika" class="text-white mx-3"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-white mx-3"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="text-white mx-3"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            <p class="mt-5 opacity-50 small">© 2026 Bharath Darsika Labs. Proudly built for the Next Billion Travelers of India. 🇮🇳</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
